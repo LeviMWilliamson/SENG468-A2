@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>Bookstore</title>
+		<link rel='stylesheet' href='style.css'/>
+		<script src='main.js' type='module' async defer></script>
+	</head>
+	<body>
+		<header>
+			<h1>🏬 Bookstore</h1>
+			<div class='center-block'><samp id='network-status'></samp></div>
+		</header>
+		<main>
+			<section>
+				<h2>👋 User</h2>
+				<input type='text' id='username' placeholder='Name'/>
+			</section>
+			<section>
+				<h2>📚 Available Titles</h2>
+				<dl id='book-list'></dl>
+			</section>
+			
+			<section>
+				<h2>🛒 Cart</h2>
+				<dl id='cart-list'></dl>
+				<button
+					id='order'
+					type='button'
+					disabled
+				>📩 Order</button>
+			</section>
+
+			<section>
+				<h2>📃 Orders</h2>
+				<dl id='order-list'></dl>
+				<button
+					id='refresh-orders'
+					type='button'
+				>📨 Refresh</button>
+			</section>
+		</main>
+		<footer>
+			<p>&copy; 2020 Bookstore</p>
+		</footer>
+		
+		<!-- templates -->
+		<template id='book-listing-template'>
+			<dt slot='title'></dt>
+			<dd>
+				<p slot='description'></p>
+				<p>Price: $<data slot='price'></data></p>
+				<p><button
+					class='add-to-cart'
+					type='button'
+				>🛒 Add to Cart</button></p>
+			</dd>
+		</template>
+		<template id='cart-listing-template'>
+			<dt slot='title'></dt>
+			<dd>
+				<p>Quantity: <data slot='quantity'></data></p>
+				<p>Price: $<data slot='price'></data></p>
+				<p>Total: $<data slot='total'></data></p>
+				<p><button
+					class='remove-from-cart'
+					type='button'
+				>🛒 Remove from Cart</button></p>
+			</dd>
+		</template>
+		<template id='order-listing-template'>
+			<dt>Username: <data slot='username'></data></dt>
+			<dd>
+				<p>Time: <data slot='time'></data></p>
+				<p>ProductId: <data slot='id'></data></p>
+				<p>Quantity: <data slot='quantity'></data></p>
+				<p>Price: $<data slot='price'></data></p>
+				<p>Total: $<data slot='total'></data></p>
+			</dd>
+	</body>
+</html>

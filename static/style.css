@@ -1,0 +1,71 @@
+/* layout */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	padding: 1ch;
+	background: lightblue;
+}
+
+main {
+	margin: 0;
+	padding: 1ch;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+
+section {
+	margin: 0;
+	padding: 1ch;
+}
+
+/* elements */
+dt { font-weight: bold; }
+
+/* custom */
+.center-block {
+	text-align: center;
+}
+
+button#order {
+	border: none;
+	border-radius: 1ch;
+	padding: 1ch;
+
+	cursor: pointer;
+
+	background: lightgreen;
+	box-shadow: 2px 2px 1px 2px hotpink;
+}
+button#order:disabled {
+	cursor: not-allowed;
+	background: lightgray;
+	box-shadow: none;
+}
+
+
+button.add-to-cart, button#refresh-orders {
+	border: none;
+	border-radius: 1ch;
+	padding: 1ch;
+
+	cursor: pointer;
+
+	background: lightgreen;
+	box-shadow: 2px 2px 1px 2px pink;
+}
+
+button.remove-from-cart {
+	border: none;
+	border-radius: 1ch;
+	padding: 1ch;
+
+	cursor: pointer;
+
+	background: lightcoral;
+	box-shadow: 2px 2px 1px 2px pink;
+}
